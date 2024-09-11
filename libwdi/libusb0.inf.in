@@ -1,7 +1,7 @@
 ; #INF_FILENAME#
 ; Copyright (c) 2010 libusb-win32 (GNU LGPL)
 [Strings]
-DeviceName = "VK_DAQ"
+DeviceName = "#DEVICE_DESCRIPTION#"
 VendorName = "Shenzhen Vkinging Electronics Co., Ltd."
 SourceName = "VK_DAQ Install Disk"
 DeviceID   = "#DEVICE_HARDWARE_ID#"
@@ -12,7 +12,7 @@ Signature   = "$Windows NT$"
 Class       = "Vkinging USB Devices"
 ClassGuid   = {EB781AAF-9C70-4523-A5DF-642A87ECA567}
 Provider    = "Vkinging"
-CatalogFile = VK_DAQ.cat
+CatalogFile = #CAT_FILENAME#
 DriverVer   = #DRIVER_DATE#, #DRIVER_VERSION#
 
 [ClassInstall32]
