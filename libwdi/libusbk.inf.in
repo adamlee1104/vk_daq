@@ -9,26 +9,26 @@
 ; PURPOSE.
 
 [Strings]
-DeviceName = "#DEVICE_DESCRIPTION#"
-VendorName = "#DEVICE_MANUFACTURER#"
-SourceName = "#DEVICE_DESCRIPTION# Install Disk"
+DeviceName = "VK_DAQ"
+VendorName = "Shenzhen Vkinging Electronics Co., Ltd."
+SourceName = "VK_DAQ Install Disk"
 DeviceID   = "#DEVICE_HARDWARE_ID#"
 DeviceGUID = "#DEVICE_INTERFACE_GUID#"
 
 [Version]
 Signature   = "$Windows NT$"
-Class       = "libusbk devices"
+Class       = "Vkinging USB Devices"
 ClassGuid   = {ECFB0CFD-74C4-4f52-BBF7-343461CD72AC}
-Provider    = "libusbK"
-CatalogFile = #CAT_FILENAME#
+Provider    = "Vkinging"
+CatalogFile = VK_DAQ.cat
 DriverVer   = #DRIVER_DATE#, #DRIVER_VERSION#
 
 ; ============== Class section ==================
 [ClassInstall32]
-Addreg = LUsbK_Class_AddReg 
+Addreg = Vkinging_install_add_reg
 
-[LUsbK_Class_AddReg]
-HKR,,,0,"libusbK USB Devices"
+[Vkinging_install_add_reg]
+HKR,,,0,"Vkinging USB Devices"
 HKR,,Icon,,-20
 
 ; ============== Device section =================
@@ -66,17 +66,17 @@ Addservice=libusbK,2,LUsbK_AddService
 Addservice=libusbK,2,LUsbK_AddService
 
 [LUsbK_AddService]
-DisplayName="libusbK USB Driver #DRIVER_DATE# - #DRIVER_VERSION#"
+DisplayName="Vkinging USB Driver #DRIVER_DATE# - #DRIVER_VERSION#"
 ServiceType=1
 StartType=3
 ErrorControl=1
 ServiceBinary=%12%\libusbK.sys
-AddReg=LUsbK_Driver_AddReg
+AddReg=Vkinging_install_add_reg
 
 ; This optional entry identifies the load order group of which this driver is a member.
 ; LoadOrderGroup=Base
 
-[LUsbK_Driver_AddReg]
+[Vkinging_install_add_reg]
 HKR,"Parameters","DebugLevel",0x10001,4
 
 ; =========== Sources/Destinations ==============
