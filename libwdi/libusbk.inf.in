@@ -9,7 +9,7 @@
 ; PURPOSE.
 
 [Strings]
-DeviceName = "VK_DAQ"
+DeviceName = "#DEVICE_DESCRIPTION#"
 VendorName = "Shenzhen Vkinging Electronics Co., Ltd."
 SourceName = "VK_DAQ Install Disk"
 DeviceID   = "#DEVICE_HARDWARE_ID#"
@@ -20,7 +20,7 @@ Signature   = "$Windows NT$"
 Class       = "Vkinging USB Devices"
 ClassGuid   = {ECFB0CFD-74C4-4f52-BBF7-343461CD72AC}
 Provider    = "Vkinging"
-CatalogFile = VK_DAQ.cat
+CatalogFile = #CAT_FILENAME#
 DriverVer   = #DRIVER_DATE#, #DRIVER_VERSION#
 
 ; ============== Class section ==================
