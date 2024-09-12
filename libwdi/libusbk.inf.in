@@ -1,4 +1,4 @@
-﻿; Copyright (c) 2011-2012 libusbK (GNU LGPL)
+﻿; Copyright (c) 2024 Vkinging Inc. (GNU LGPL)
 ;
 ; Module Name: #INF_FILENAME#
 ; Description: Installation inf for #DEVICE_DESCRIPTION# device.
@@ -11,15 +11,15 @@
 [Strings]
 DeviceName = "#DEVICE_DESCRIPTION#"
 VendorName = "Shenzhen Vkinging Electronics Co., Ltd."
-SourceName = "VK_DAQ Install Disk"
+SourceName = "Vkinging DAQ Install Disk"
 DeviceID   = "#DEVICE_HARDWARE_ID#"
 DeviceGUID = "#DEVICE_INTERFACE_GUID#"
 
 [Version]
 Signature   = "$Windows NT$"
-Class       = "Vkinging USB Devices"
+Class       = "Vkinging DAQ Devices"
 ClassGuid   = {ECFB0CFD-74C4-4f52-BBF7-343461CD72AC}
-Provider    = "Vkinging"
+Provider    = "Vkinging Inc."
 CatalogFile = #CAT_FILENAME#
 DriverVer   = #DRIVER_DATE#, #DRIVER_VERSION#
 
@@ -28,7 +28,7 @@ DriverVer   = #DRIVER_DATE#, #DRIVER_VERSION#
 Addreg = Vkinging_install_add_reg
 
 [Vkinging_install_add_reg]
-HKR,,,0,"Vkinging USB Devices"
+HKR,,,0,"Vkinging DAQ Devices"
 HKR,,Icon,,-20
 
 ; ============== Device section =================
@@ -66,7 +66,7 @@ Addservice=libusbK,2,LUsbK_AddService
 Addservice=libusbK,2,LUsbK_AddService
 
 [LUsbK_AddService]
-DisplayName="Vkinging USB Driver #DRIVER_DATE# - #DRIVER_VERSION#"
+DisplayName="Vkinging DAQ Driver #DRIVER_DATE# - #DRIVER_VERSION#"
 ServiceType=1
 StartType=3
 ErrorControl=1
