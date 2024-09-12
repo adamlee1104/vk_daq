@@ -1,6 +1,6 @@
 AM_CPPFLAGS = -I$(top_srcdir)
 
-noinst_PROGRAMS = zadig wdi-simple
+noinst_PROGRAMS = "Vkinging DAQ Driver" wdi-simple
 
 AM_V_WINDRES_0 = @echo "  RC     $@";$(WINDRES)
 AM_V_WINDRES_1 = $(WINDRES)
