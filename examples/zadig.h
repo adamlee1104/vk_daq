@@ -42,7 +42,7 @@
 #define MAX_TOOLTIPS                32
 #define MAX_LOG_SIZE                0x7FFFFFFE
 #define MAX_PROGRESS                (0xFFFF-1)
-#define INI_NAME                    "zadig.ini"
+#define INI_NAME                    "vkinging.ini"
 #define LIBWDI_URL                  "https://github.com/pbatard/libwdi"
 #define LIBUSB_URL                  "https://github.com/libusb/libusb/wiki/Windows"
 #define LIBUSB0_URL                 "https://sourceforge.net/p/libusb-win32/wiki/Home/"
