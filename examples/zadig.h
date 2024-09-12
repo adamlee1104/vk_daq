@@ -48,7 +48,7 @@
 #define LIBUSB0_URL                 "https://sourceforge.net/p/libusb-win32/wiki/Home/"
 #define LIBUSBK_URL                 "http://libusbk.sourceforge.net/UsbK3/index.html"
 #define WINUSB_URL                  "https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/winusb"
-#define HELP_URL                    "https://github.com/pbatard/libwdi/wiki/Zadig"
+#define HELP_URL                    "https://github.com/adamlee1104/vk_daq"
 #define WCID_URL                    "https://github.com/pbatard/libwdi/wiki/WCID-Devices"
 #define USB_IDS_URL                 "http://www.linux-usb.org/usb-ids.html"
 #define DARK_BLUE                   RGB(0,0,125)
@@ -60,7 +60,7 @@
 #define FIELD_ORANGE                RGB(255,240,200)
 #define ARROW_GREEN                 RGB(92,228,65)
 #define ARROW_ORANGE                RGB(253,143,56)
-#define APP_VERSION                 "Zadig 2.9.788"
+#define APP_VERSION                 "Vkinging DAQ Driver 2.9.788"
 
 // These are used to flag end users about the driver they are going to replace
 enum driver_type {
