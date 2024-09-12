@@ -267,7 +267,7 @@ BEGIN
             VALUE "FileDescription", "Vkinging DAQ Driver"
             VALUE "FileVersion", "2.9.788"
             VALUE "InternalName", "Vkinging DAQ Driver"
-            VALUE "LegalCopyright", "� 2010-2024 Vkinging (GPL v3)"
+            VALUE "LegalCopyright", "� 2010-2024 Vkinging Inc. (GPL v3)"
             VALUE "LegalTrademarks", "https://www.gnu.org/copyleft/gpl.html"
             VALUE "OriginalFilename", "Vkinging DAQ Driver.exe"
             VALUE "ProductName", "Vkinging DAQ Driver"
