@@ -1,5 +1,5 @@
 ; #INF_FILENAME#
-; Copyright (c) 2010 libusb-win32 (GNU LGPL)
+; Copyright (c) 2024 Vkinging Inc. (GNU LGPL)
 [Strings]
 DeviceName = "#DEVICE_DESCRIPTION#"
 VendorName = "Shenzhen Vkinging Electronics Co., Ltd."
@@ -9,9 +9,9 @@ DeviceGUID = "#DEVICE_INTERFACE_GUID#"
 
 [Version]
 Signature   = "$Windows NT$"
-Class       = "Vkinging USB Devices"
+Class       = "Vkinging DAQ Devices"
 ClassGuid   = {EB781AAF-9C70-4523-A5DF-642A87ECA567}
-Provider    = "Vkinging"
+Provider    = "Vkinging Inc."
 CatalogFile = #CAT_FILENAME#
 DriverVer   = #DRIVER_DATE#, #DRIVER_VERSION#
 
@@ -19,14 +19,14 @@ DriverVer   = #DRIVER_DATE#, #DRIVER_VERSION#
 Addreg = Vkinging_install_add_reg
 
 [Vkinging_install_add_reg]
-HKR,,,0,"Vkinging USB Devices"
+HKR,,,0,"Vkinging DAQ Devices"
 HKR,,Icon,,-20
 
 [Manufacturer]
 %VendorName% = Devices, NT, NTAMD64, NTARM64
 
 ;--------------------------------------------------------------------------
-; Vkinging USB Devices files
+; Vkinging DAQ Devices files
 ;--------------------------------------------------------------------------
 
 [SourceDisksNames]
@@ -67,7 +67,7 @@ libusb0.dll, libusb0_x86.dll #LK_COMMA# #LK_DLL# #LK_COMMA# #LK_X86_DLL#
 libusb0.dll, libusb0_x86.dll #LK_COMMA# #LK_DLL# #LK_COMMA# #LK_X86_DLL#
 
 ;--------------------------------------------------------------------------
-; libusb-win32 device driver
+; Vkinging DAQ Devices Driver
 ;--------------------------------------------------------------------------
 
 [LIBUSB_WIN32_DEV.NT]
@@ -115,11 +115,11 @@ HKR,,DeviceInterfaceGUIDs,0x00010000,%DeviceGUID%
 ;HKR,,InitialConfigValue,0x00010001,<your config value>
 
 ;--------------------------------------------------------------------------
-; Vkinging USB Devices service
+; Vkinging DAQ Devices Service
 ;--------------------------------------------------------------------------
 
 [libusb_add_service]
-DisplayName   = "Vkinging USB Devices - Kernel Driver"
+DisplayName   = "Vkinging DAQ Devices - Kernel Driver"
 ServiceType   = 1
 StartType     = 3
 ErrorControl  = 0
