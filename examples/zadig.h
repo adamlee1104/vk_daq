@@ -33,9 +33,9 @@
 #endif
 #define _IGNORE(expr)               do { (void)(expr); } while(0)
 
-#define APPLICATION_NAME            "Zadig"
-#define COMPANY_NAME                "Akeo Consulting"
-#define APPLICATION_URL             "https://zadig.akeo.ie"
+#define APPLICATION_NAME            "Vkinging DAQ Driver"
+#define COMPANY_NAME                "Shenzhen Vkinging Electronics Co., Ltd."
+#define APPLICATION_URL             "https://www.vkinging.com"
 #define STR_BUFFER_SIZE             512
 #define NOTIFICATION_DELAY          1000
 #define NET_SESSION_TIMEOUT         3500
