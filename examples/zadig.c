@@ -1,7 +1,7 @@
 /*
- * Zadig: Automated Driver Installer for USB devices (GUI version)
- * Copyright (c) 2010-2023 Pete Batard <pete@akeo.ie>
- * For more info, please visit http://libwdi.akeo.ie
+ * Vkinging DAQ Driver: Automated Driver Installer for USB devices (GUI version)
+ * Copyright (c) 2010-2024 Vkinging Inc.
+ * For more info, please visit https://www.vkinging.com
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -82,10 +82,10 @@ float fScale = 1.0f;
 WORD application_version[4];
 char app_dir[MAX_PATH], driver_text[64];
 char szFolderPath[MAX_PATH];
-const char* driver_display_name[WDI_NB_DRIVERS] = { "WinUSB", "libusb-win32", "libusbK", "USB Serial (CDC)", "Custom (extract only)" };
-const char* driver_name[WDI_NB_DRIVERS] = { "WinUSB", "libusb0", "libusbK", "usbser", "custom" };
-//const char* driver_display_name[WDI_NB_DRIVERS] = { "libusbK" };
-//const char* driver_name[WDI_NB_DRIVERS] = { "libusbK" };
+//const char* driver_display_name[WDI_NB_DRIVERS] = { "WinUSB", "libusb-win32", "libusbK", "USB Serial (CDC)", "Custom (extract only)" };
+//const char* driver_name[WDI_NB_DRIVERS] = { "WinUSB", "libusb0", "libusbK", "usbser", "custom" };
+const char* driver_display_name[WDI_NB_DRIVERS] = { "libusbK" };
+const char* driver_name[WDI_NB_DRIVERS] = { "libusbK" };
 struct wdi_options_create_list cl_options = { 0 };
 struct wdi_options_prepare_driver pd_options = { 0 };
 struct wdi_options_install_cert ic_options = { 0 };
@@ -272,8 +272,8 @@ void __cdecl notification_delay_thread(void* param)
 int get_driver_type(struct wdi_device_info* dev)
 {
 	int i;
-	const char* libusb_name[] = { "WinUSB", "libusb0", "libusbK", "usbser" };
-	//const char* libusb_name[] = { "libusbK" };
+	//const char* libusb_name[] = { "WinUSB", "libusb0", "libusbK", "usbser" };
+	const char* libusb_name[] = { "libusbK" };
 	const char* system_name[] = { "usbccgp", "usbstor", "uaspstor", "vusbstor", "etronstor", "hidusb",
 		// NOTE: The list of hubs below should match the one from libwdi.c
 		"usbhub", "usbhub3", "nusb3hub", "usbhub", "usbhub3", "usb3hub", "nusb3hub", "rusb3hub",
@@ -2052,7 +2052,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		mutex = CreateMutexA(NULL, TRUE, "Global/" APPLICATION_NAME);
 	}
 	if ((mutex == NULL) || (GetLastError() == ERROR_ALREADY_EXISTS)) {
-		MessageBoxA(NULL, "Another Zadig application is running.\n"
+		MessageBoxA(NULL, "Another Vkinging DAQ Driver application is running.\n"
 			"Please close the first application before running another one.",
 			"Other instance detected", MB_ICONSTOP);
 		safe_closehandle(mutex);
