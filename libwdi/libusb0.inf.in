@@ -3,7 +3,7 @@
 [Strings]
 DeviceName = "#DEVICE_DESCRIPTION#"
 VendorName = "Shenzhen Vkinging Electronics Co., Ltd."
-SourceName = "VK_DAQ Install Disk"
+SourceName = "Vkinging DAQ Install Disk"
 DeviceID   = "#DEVICE_HARDWARE_ID#"
 DeviceGUID = "#DEVICE_INTERFACE_GUID#"
 
