@@ -1,5 +1,5 @@
 /*
- * Zadig: Automated Driver Installer for USB devices (GUI version)
+ * Vkinging DAQ Driver: Automated Driver Installer for USB devices (GUI version)
  * Copyright (c) 2010-2024 Pete Batard <pete@akeo.ie>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 
 const char* about_blurb_format =
 "{\\rtf1\\ansi\n"
-"{\\b\\fs20Zadig - The Automated Driver Installer}\\line\n"
+"{\\b\\fs20Vkinging DAQ Driver - The Automated Driver Installer}\\line\n"
 "\\fs18Version %d.%d (Build %d)\\line\n"
 "\\line\n"
 "Copyright © 2010-2024 Pete Batard / Akeo\\line\n"
