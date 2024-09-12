@@ -1,6 +1,6 @@
 /*
- * Zadig: Automated Driver Installer for USB devices (GUI version)
- * Copyright (c) 2010-2023 Pete Batard <pete@akeo.ie>
+ * Vkinging DAQ Driver: Automated Driver Installer for USB devices (GUI version)
+ * Copyright (c) 2010-2023 Vkinging Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -60,7 +60,7 @@
 #define FIELD_ORANGE                RGB(255,240,200)
 #define ARROW_GREEN                 RGB(92,228,65)
 #define ARROW_ORANGE                RGB(253,143,56)
-#define APP_VERSION                 "Vkinging DAQ Driver 2.9.788"
+#define APP_VERSION                 "Vkinging Inc."
 
 // These are used to flag end users about the driver they are going to replace
 enum driver_type {
