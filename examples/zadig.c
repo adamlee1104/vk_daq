@@ -96,7 +96,7 @@ int windows_version = WINDOWS_UNDEFINED;
 char windows_version_str[128];
 char* current_device_hardware_id = NULL;
 char* editable_desc = NULL;
-int default_driver_type = WDI_libusbK;
+int default_driver_type = WDI_LIBUSBK;
 int log_level = WDI_LOG_LEVEL_DEBUG;
 int nb_devices = -1;
 int dialog_showing = 0;
@@ -1364,10 +1364,10 @@ BOOL parse_ini(void) {
 	}
 
 	// Set the default driver
-	profile_get_integer(profile, "driver", "default_driver", NULL, WDI_libusbK, &default_driver_type);
-	if ((default_driver_type < WDI_libusbK) || (default_driver_type >= WDI_NB_DRIVERS)) {
+	profile_get_integer(profile, "driver", "default_driver", NULL, WDI_LIBUSBK, &default_driver_type);
+	if ((default_driver_type < WDI_LIBUSBK) || (default_driver_type >= WDI_NB_DRIVERS)) {
 		dprintf("invalid value '%d' for ini option 'default_driver'", default_driver_type);
-		default_driver_type = WDI_libusbK;
+		default_driver_type = WDI_LIBUSBK;
 	}
 
 	profile_close(profile);
