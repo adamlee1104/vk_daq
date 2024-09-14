@@ -46,9 +46,9 @@ extern "C" {
  * Type of driver to install
  */
 enum wdi_driver_type {
+	WDI_LIBUSBK,
 	WDI_WINUSB,
 	WDI_LIBUSB0,
-	WDI_LIBUSBK,
 	WDI_CDC,
 	WDI_USER,
 	WDI_NB_DRIVERS	// Total number of drivers in the enum
