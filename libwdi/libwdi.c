@@ -1260,7 +1260,7 @@ int LIBWDI_API wdi_prepare_driver(struct wdi_device_info* device_info, const cha
 	PF_TYPE_DECL(NTAPI, NTSTATUS, NtQuerySystemInformation, (SYSTEM_INFORMATION_CLASS, PVOID, ULONG, PULONG));
 	const wchar_t bom = 0xFEFF;
 #if defined(ENABLE_DEBUG_LOGGING) || defined(INCLUDE_DEBUG_LOGGING)
-	const char* driver_display_name[WDI_NB_DRIVERS] = { "WinUSB", "libusb0.sys", "libusbK.sys", "Generic USB CDC", "user driver" };
+	const char* driver_display_name[WDI_NB_DRIVERS] = { "libusbK.sys", "WinUSB", "libusb0.sys", "Generic USB CDC", "user driver" };
 #endif
 	const char* inf_ext = ".inf";
 	const char* vendor_name = NULL;
@@ -1268,7 +1268,7 @@ int LIBWDI_API wdi_prepare_driver(struct wdi_device_info* device_info, const cha
 	char drv_path[MAX_PATH], inf_path[MAX_PATH], cat_path[MAX_PATH], hw_id[40], cert_subject[64];
 	char *strguid, *token, *cat_name = NULL, *dst = NULL, *inf_name;
 	wchar_t *wdst = NULL;
-	int i, nb_entries, driver_type = WDI_WINUSB, r = WDI_ERROR_OTHER;
+	int i, nb_entries, driver_type = WDI_LIBUSBK, r = WDI_ERROR_OTHER;
 	long inf_file_size, cat_file_size;
 	BOOL is_android_device = FALSE, is_test_signing_enabled = FALSE;
 	FILE* fd;
