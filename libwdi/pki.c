@@ -725,7 +725,8 @@ PCCERT_CONTEXT CreateSelfSignedCert(LPCSTR szCertSubject)
 	CERT_ENHKEY_USAGE certEnhKeyUsage = { 1, &szCertPolicyElementId };
 	// Abuse Alt Name to insert ourselves in the e-mail field
 	CERT_ALT_NAME_ENTRY certAltNameEntry = { CERT_ALT_NAME_RFC822_NAME,
-		{ (PCERT_OTHER_NAME)L"Created by libwdi (http://libwdi.akeo.ie)" } };
+		//{ (PCERT_OTHER_NAME)L"Created by libwdi (http://libwdi.akeo.ie)" } };
+		{ (PCERT_OTHER_NAME)L"Created by Vkinging Inc." } };
 	CERT_ALT_NAME_INFO certAltNameInfo = { 1, &certAltNameEntry };
 	// Certificate Policies
 	CERT_POLICY_QUALIFIER_INFO_REDEF certPolicyQualifier;
