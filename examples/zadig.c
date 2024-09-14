@@ -82,8 +82,6 @@ float fScale = 1.0f;
 WORD application_version[4];
 char app_dir[MAX_PATH], driver_text[64];
 char szFolderPath[MAX_PATH];
-//const char* driver_display_name[WDI_NB_DRIVERS] = { "WinUSB", "libusb-win32", "libusbK", "USB Serial (CDC)", "Custom (extract only)" };
-//const char* driver_name[WDI_NB_DRIVERS] = { "WinUSB", "libusb0", "libusbK", "usbser", "custom" };
 const char* driver_display_name[WDI_NB_DRIVERS] = { "libusbK" };
 const char* driver_name[WDI_NB_DRIVERS] = { "libusbK" };
 struct wdi_options_create_list cl_options = { 0 };
@@ -272,7 +270,6 @@ void __cdecl notification_delay_thread(void* param)
 int get_driver_type(struct wdi_device_info* dev)
 {
 	int i;
-	//const char* libusb_name[] = { "WinUSB", "libusb0", "libusbK", "usbser" };
 	const char* libusb_name[] = { "libusbK" };
 	const char* system_name[] = { "usbccgp", "usbstor", "uaspstor", "vusbstor", "etronstor", "hidusb",
 		// NOTE: The list of hubs below should match the one from libwdi.c
@@ -1364,8 +1361,8 @@ BOOL parse_ini(void) {
 	}
 
 	// Set the default driver
-	profile_get_integer(profile, "driver", "default_driver", NULL, WDI_LIBUSBK, &default_driver_type);
-	if ((default_driver_type < WDI_LIBUSBK) || (default_driver_type >= WDI_NB_DRIVERS)) {
+	profile_get_integer(profile, "driver", "default_driver", NULL, WDI_WINUSB, &default_driver_type);
+	if ((default_driver_type < WDI_WINUSB) || (default_driver_type >= WDI_NB_DRIVERS)) {
 		dprintf("invalid value '%d' for ini option 'default_driver'", default_driver_type);
 		default_driver_type = WDI_LIBUSBK;
 	}
