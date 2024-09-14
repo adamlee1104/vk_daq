@@ -524,7 +524,7 @@ BOOL select_next_driver(int increment)
 {
 	int i;
 
-	for (i=WDI_WINUSB; i<WDI_NB_DRIVERS; i++) {	// don't loop forever
+	for (i=WDI_LIBUSBK; i<WDI_NB_DRIVERS; i++) {	// don't loop forever
 		pd_options.driver_type = (WDI_NB_DRIVERS + pd_options.driver_type + increment)%WDI_NB_DRIVERS;
 		if (wdi_is_driver_supported(pd_options.driver_type, NULL))
 			break;
@@ -1361,10 +1361,10 @@ BOOL parse_ini(void) {
 	}
 
 	// Set the default driver
-	profile_get_integer(profile, "driver", "default_driver", NULL, WDI_WINUSB, &default_driver_type);
-	if ((default_driver_type < WDI_WINUSB) || (default_driver_type >= WDI_NB_DRIVERS)) {
+	profile_get_integer(profile, "driver", "default_driver", NULL, WDI_LIBUSBK, &default_driver_type);
+	if ((default_driver_type < WDI_LIBUSBK) || (default_driver_type >= WDI_NB_DRIVERS)) {
 		dprintf("invalid value '%d' for ini option 'default_driver'", default_driver_type);
-		default_driver_type = WDI_WINUSB;
+		default_driver_type = WDI_LIBUSBK;
 	}
 
 	profile_close(profile);
@@ -1840,13 +1840,13 @@ INT_PTR CALLBACK main_callback(HWND hDlg, UINT message, WPARAM wParam, LPARAM lP
 					if (has_wcid == WCID_TRUE) {
 						SetDlgItemTextA(hMainDialog, IDC_WCID, device->compatible_id + safe_strlen(ms_comp_hdr));
 						// Select the driver according to the WCID (will be set to WDI_USER = unsupported if no match)
-						for (wcid_type=WDI_WINUSB; wcid_type<WDI_LIBUSBK; wcid_type++) {
+						for (wcid_type=WDI_LIBUSBK; wcid_type<WDI_LIBUSBK; wcid_type++) {
 							if (safe_stricmp(device->compatible_id + safe_strlen(ms_comp_hdr), driver_name[wcid_type]) == 0) {
 								break;
 							}
 						}
 						if (wcid_type < WDI_USER) {
-							for (i=WDI_WINUSB; i<WDI_USER; i++) {
+							for (i=WDI_LIBUSBK; i<WDI_USER; i++) {
 								if ((i == wcid_type) && (wdi_is_driver_supported(i, NULL)))
 									break;
 							}
