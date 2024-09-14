@@ -722,8 +722,8 @@ BOOL LIBWDI_API wdi_is_driver_supported(int driver_type, VS_FIXEDFILEINFO* drive
 	}
 
 	switch (driver_type) {
-	case WDI_WINUSB:
-#if defined(WDK_DIR)
+	case WDI_LIBUSBK:
+#if defined(LIBUSBK_DIR)
 		return TRUE;
 #else
 		return FALSE;
@@ -734,8 +734,8 @@ BOOL LIBWDI_API wdi_is_driver_supported(int driver_type, VS_FIXEDFILEINFO* drive
 #else
 		return FALSE;
 #endif
-	case WDI_LIBUSBK:
-#if defined(LIBUSBK_DIR)
+	case WDI_WINUSB:
+#if defined(WDK_DIR)
 		return (platform_arch == IMAGE_FILE_MACHINE_AMD64 || platform_arch == IMAGE_FILE_MACHINE_I386);
 #else
 		return FALSE;
